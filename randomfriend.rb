@@ -8,3 +8,7 @@ request_secret= oauth.request_token.secret
 
 puts "Please visit this address to authorize me:"
 puts oauth.request_token.authorize_url
+
+puts "Please enter the PIN twitter gave you:"
+print "> "
+pin = gets.chomp
