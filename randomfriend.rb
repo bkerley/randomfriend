@@ -12,3 +12,7 @@ puts oauth.request_token.authorize_url
 puts "Please enter the PIN twitter gave you:"
 print "> "
 pin = gets.chomp
+
+oauth.authorize_from_request(request_token, request_secret, pin)
+
+twitter = Twitter::Base.new oauth
